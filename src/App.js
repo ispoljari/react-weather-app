@@ -17,15 +17,17 @@ class App extends Component {
   }
 
   updateData = data => {
-    this.setState({
-      apiData: {
-        country: data.sys.country,
-        city: data.name,
-        temperature: data.main.temp,
-        humidity: data.main.humidity,
-        description: data.weather[0].description
-      }
-    })
+    if (data) {
+      this.setState({
+        apiData: {
+          country: data.sys.country,
+          city: data.name,
+          temperature: data.main.temp,
+          humidity: data.main.humidity,
+          description: data.weather[0].description
+        }
+      });
+    }
   }
 
   render() {

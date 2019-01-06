@@ -24,8 +24,8 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.getWeather}>
-        <input type="text" name="city" placeholder="City..."/>
-        <input type="text" name="country" placeholder="Country..."/>
+        <input type="text" name="city" placeholder="City..." required/>
+        <input type="text" name="country" placeholder="Country..." required/>
         <button type="submit">Get Weather</button>
       </form>
     )
