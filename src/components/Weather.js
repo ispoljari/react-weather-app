@@ -4,7 +4,10 @@ class Weather extends Component {
   render() {
     return (
       <div>
-        {this.props.apiData.temperature}
+        <p>Location: { this.props.apiData.city }, { this.props.apiData.country } </p>
+        <p>Temperature: { this.props.apiData.temperature }</p>
+        <p>Humidity: { this.props.apiData.humidity }</p>
+        <p>Conditions: { this.props.apiData.description }</p>
       </div>
     );
   }
