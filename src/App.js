@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div>
         <Titles />
-        <Form />
+        <Form getWeather={this.getWeather}/>
         <Weather />
       </div>
     );
