@@ -5,11 +5,8 @@ import Weather from './components/Weather';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      apiData: ''
-    }
+  state = {
+    apiData: ''
   }
 
   updateData = data => {
