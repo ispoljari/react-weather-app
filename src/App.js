@@ -6,12 +6,25 @@ import './App.css';
 
 class App extends Component {
   state = {
-    apiData: ''
+    apiData: {
+      country: undefined,
+      city: undefined,
+      temperature: undefined,
+      humidity: undefined,
+      description: undefined,
+      error: undefined
+    }
   }
 
   updateData = data => {
     this.setState({
-      apiData: data
+      apiData: {
+        country: data.sys.country,
+        city: data.name,
+        temperature: data.main.temp,
+        humidity: data.main.humidity,
+        description: data.weather[0].description
+      }
     })
   }
 
