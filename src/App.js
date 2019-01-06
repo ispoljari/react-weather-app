@@ -48,10 +48,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Titles />
-        <Form returnApiResponse = {data => this.updateData(data)}/>
-        <Weather apiData = {this.state.apiData}/>
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-5 title-container">
+                <Titles />
+              </div>
+              <div className="col-xs-7 form-container">
+                <Form returnApiResponse = {data => this.updateData(data)}/>
+                <Weather apiData = {this.state.apiData}/>
+              </div>
+            </div> 
+          </div>
+        </div>
       </div>
     );
   }
