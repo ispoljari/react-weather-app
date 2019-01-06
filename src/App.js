@@ -18,15 +18,31 @@ class App extends Component {
 
   updateData = data => {
     if (data) {
-      this.setState({
-        apiData: {
-          country: data.sys.country,
-          city: data.name,
-          temperature: data.main.temp,
-          humidity: data.main.humidity,
-          description: data.weather[0].description
-        }
-      });
+      if (parseInt(data.cod, 10) === 200) {
+        this.setState({
+          apiData: {
+            country: data.sys.country,
+            city: data.name,
+            temperature: data.main.temp,
+            humidity: data.main.humidity,
+            description: data.weather[0].description,
+            error: undefined
+          }
+        });
+      } 
+      
+      if (parseInt(data.cod, 10) !== 200) {
+        this.setState({
+          apiData: {
+            country: undefined,
+            city: undefined,
+            temperature: undefined,
+            humidity: undefined,
+            description: undefined,
+            error: data.message
+          }
+        });
+      }
     }
   }
 

@@ -12,6 +12,7 @@ class Form extends Component {
 
     if (apiCall) {
       const apiData = await apiCall.json();
+      console.log(apiData);
       this.props.returnApiResponse(apiData); // return data to the app component
     }
   }
