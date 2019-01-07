@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Description
-This app provides basic weather info for the selected location
-Currently optimized only for desktop width screens (not responsive).
+This app provides basic weather info for the selected location.
+Currently optimized only for desktop & laptop width screens (not responsive).
 
 ## Available Scripts
 
